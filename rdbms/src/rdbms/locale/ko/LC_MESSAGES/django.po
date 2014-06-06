@@ -1,0 +1,299 @@
+# Korean translations for Hue.
+# Copyright (C) 2012 Cloudera
+# This file is distributed under the same license as the Hue project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-12-05 15:18-0800\n"
+"PO-Revision-Date: 2012-07-30 18:50-0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: src/rdbms/api.py:128 src/rdbms/api.py:173 src/rdbms/api.py:256
+msgid "A POST request is required."
+msgstr "POST 요청이 필요합니다."
+
+#: src/rdbms/api.py:160 src/rdbms/api.py:198
+msgid "There was an error with your query."
+msgstr ""
+
+#: src/rdbms/api.py:283
+#, fuzzy
+msgid "A GET request is required."
+msgstr "POST 요청이 필요합니다."
+
+#: src/rdbms/api.py:324
+msgid "Server specified doesn't exist."
+msgstr ""
+
+#: src/rdbms/api.py:330
+msgid "No databases are available. Permissions could be missing."
+msgstr ""
+
+#: src/rdbms/conf.py:28
+msgid "RDBMS server configurations."
+msgstr ""
+
+#: src/rdbms/conf.py:30
+msgid "RDBMS server configuration."
+msgstr ""
+
+#: src/rdbms/conf.py:34
+msgid "Nice name of server."
+msgstr ""
+
+#: src/rdbms/conf.py:40
+msgid ""
+"Database name or path to database file. If provided, then choosing other "
+"databases will not be permitted."
+msgstr ""
+
+#: src/rdbms/conf.py:46
+msgid "Database engine, such as postgresql_psycopg2, mysql, or sqlite3."
+msgstr ""
+
+#: src/rdbms/conf.py:52
+msgid "Database username."
+msgstr ""
+
+#: src/rdbms/conf.py:58
+msgid "Database password."
+msgstr ""
+
+#: src/rdbms/conf.py:64
+msgid "Database host."
+msgstr ""
+
+#: src/rdbms/conf.py:70
+msgid "Database port."
+msgstr ""
+
+#: src/rdbms/conf.py:76
+msgid "Database options to send to the server when connecting."
+msgstr ""
+
+#: src/rdbms/conf.py:92
+#, python-format
+msgid ""
+"Database name should not be empty for the SQLite backend. The %s may not "
+"work correctly."
+msgstr ""
+
+#: src/rdbms/conf.py:94
+#, python-format
+msgid ""
+"Database name should not be empty for the Oracle backend. It should be "
+"the SID of your database. The %s may not work correctly."
+msgstr ""
+
+#: src/rdbms/conf.py:96
+#, python-format
+msgid ""
+"Database name should not be empty for the PostgreSQL backend. The %s may "
+"not work correctly."
+msgstr ""
+
+#: src/rdbms/design.py:110
+msgid "No server!"
+msgstr ""
+
+#: src/rdbms/design.py:112
+msgid "No database!"
+msgstr ""
+
+#: src/rdbms/forms.py:23 src/rdbms/templates/common.mako:30
+#: src/rdbms/templates/execute.mako:61
+msgid "Query Editor"
+msgstr ""
+
+#: src/rdbms/views.py:98
+#, python-format
+msgid "Invalid design type %(type)s"
+msgstr ""
+
+#: src/rdbms/templates/common.mako:27
+msgid "DB Query"
+msgstr ""
+
+#: src/rdbms/templates/common.mako:31
+msgid "My Queries"
+msgstr ""
+
+#: src/rdbms/templates/common.mako:32
+msgid "Saved Queries"
+msgstr ""
+
+#: src/rdbms/templates/common.mako:33
+msgid "History"
+msgstr ""
+
+#: src/rdbms/templates/error.mako:23 src/rdbms/templates/execute.mako:23
+msgid "Query"
+msgstr ""
+
+#: src/rdbms/templates/error.mako:34
+msgid "There are currently no databases configured."
+msgstr ""
+
+#: src/rdbms/templates/error.mako:35
+msgid ""
+"Please go to your Hue configuration and add a database under the "
+"\"rdbms\" section."
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:33
+msgid "Server"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:46
+msgid "Database"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:69 src/rdbms/templates/execute.mako:701
+msgid "Query name"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:81
+msgid "Query description"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:92
+msgid "Your query has the following error(s):"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:101
+msgid "Execute"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:102 src/rdbms/templates/execute.mako:184
+msgid "Save"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:103
+msgid "Save as..."
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:104
+msgid "Explain"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:105
+msgid "or create a"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:105
+msgid "New query"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:131
+msgid "The server returned no results."
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:140
+msgid "Double click on a table name or field to insert it in the editor"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:141
+msgid "Manually refresh the table list"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:142
+msgid "Navigator"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:145
+msgid "Table name..."
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:146
+msgid "The selected database has no tables."
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:164
+msgid "Save your query"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:169
+msgid "Name"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:175
+msgid "Description"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:183
+msgid "Cancel"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:331
+msgid "Example: SELECT * FROM tablename, or press CTRL + space"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:528
+msgid "Did you know?"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:584
+msgid "No query provided to save."
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:695
+#, fuzzy
+msgid "This field is required."
+msgstr "POST 요청이 필요합니다."
+
+#: src/rdbms/templates/execute.mako:708
+msgid "Empty description"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:714
+msgid "Query saved successfully!"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:745
+msgid "No data available"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:746
+msgid "No matching records"
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:782
+msgid "Server error occured: "
+msgstr ""
+
+#: src/rdbms/templates/execute.mako:785
+msgid "Unmanageable server error occured: "
+msgstr ""
+
+#~ msgid "Host of the Impala Server."
+#~ msgstr "Impala 서버의 호스트입니다."
+
+#~ msgid "Port of the Impala Server."
+#~ msgstr "Impala 서버의 포트입니다."
+
+#~ msgid ""
+#~ "Beeswax or Hive Server 2 Thrift "
+#~ "API used. Choices are: 'beeswax' or "
+#~ "'hiveserver2'."
+#~ msgstr ""
+#~ "Beeswax 또는 Hive Server 2 Thrift "
+#~ "API를 사용 중입니다. 'beeswax' 또는 'hiveserver2'"
+#~ " 중에서 선택할 수 있습니다."
+
+#~ msgid ""
+#~ "Kerberos principal name for Impala. "
+#~ "Typically 'impala/hostname.foo.com'."
+#~ msgstr "Impala의 Kerberos 원칙 이름입니다. 일반적으로 'impala/hostname.foo.com'입니다."
+
+#~ msgid "No available Impalad to send queries to."
+#~ msgstr "쿼리를 전송할 사용 가능한 Impalad가 없습니다."
+
