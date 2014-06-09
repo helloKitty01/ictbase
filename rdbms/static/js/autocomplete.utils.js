@@ -20,10 +20,12 @@ function rdbms_jsoncalls(options) {
       $.getJSON(RDBMS_AUTOCOMPLETE_BASE_URL, options.onDataReceived);
     }
     if (options.database) {
+	alert(options.table);
       if (options.table) {
+	 alert('a');
         $.getJSON('http://10.60.1.149:4567/datasources/'+options.server+'/'+options.table+'/column?userid=1&callback=?', options.onDataReceived);
-      }
-      else {
+      }else {
+	  alert('b');
         $.getJSON('http://10.60.1.149:4567/datasources/'+options.server+'/showtable?userid=1&callback=?', options.onDataReceived);
       }
     }

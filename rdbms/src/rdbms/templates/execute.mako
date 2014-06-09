@@ -143,9 +143,8 @@ ${ commonheader(_('Query'), app_name, user) | n,unicode }
         <div class="card-body">
           <p>
             <input id="navigatorSearch" type="text" placeholder="${ _('Table name...') }" style="width:90%"/>
-			<table><tr>
-			<td width="130px"><a href="#" role="button" onclick='ddl_addTable()' class="btn"><i class='fa fa-plus-circle'></i> 新建表</a></td>
-			<td><a href="#" role="button" onclick='ddl_addTable()' class="btn"><i class='fa fa-minus-circle'></i> 删除表</a></td>
+			<a href="#" role="button" onclick='ddl_addTable()' class="btn"><i class='fa fa-minus-circle'></i> 删除表</a>
+			<a href="#" role="button" onclick='ddl_addTable()' class="btn"><i class='fa fa-plus-circle'></i> 新建表</a>
 			</tr></table>
             <span id="navigatorNoTables">${_('The selected database has no tables.')}</span>
 			<ul id="navigatorTables" class="unstyled"></ul>
@@ -702,7 +701,7 @@ ${ commonheader(_('Query'), app_name, user) | n,unicode }
 					  $(columns.split(" ")).each(function (iCnt, col) {
 						if ($.trim(col) != "" && $.trim(col) != "*") {
 						  var _column = $("<li class='index'>");
-						  _column.html("<a href='#' style='padding-left:10px' class='colName'><i class='fa fa-columns'></i>"+col+"</a>&nbsp;&nbsp;<input class='index_isChosen' type=checkbox value='yes' name='iskey[]'/>Length<input  type='text' value='0' class='input-small index_length'> ");
+						  _column.html("<a href='#' style='padding-left:10px' class='colName'><i class='fa fa-columns'></i>"+col+"</a>&nbsp;&nbsp;<input size='100px'class='index_isChosen' type=checkbox value='yes' name='iskey[]'/>Length<input  type='text' value='0' class='input-small index_length'> ");
 						  _column.appendTo($('#indexs'));
 						}
 					  });
@@ -852,11 +851,10 @@ ${ commonheader(_('Query'), app_name, user) | n,unicode }
  //   $("#navigatorLoader").show();
 	  rdbms_getTables(viewModel.server().name(), viewModel.database(), function (data) {  //preload tables for the default db
 	  $("#navigatorTables").empty();
-	  var __table = $("<table>");
       $(data.split(" ")).each(function (cnt, table) {
         if ($.trim(table) != "") {
           var _table = $("<li>");
-          _table.html("<tr><td width='150px'><a href='#' title='" + table + "'><i class='fa fa-table'></i> " + table + "</a></td><td><input class='index_isChosen' type=checkbox value='yes' name='iskey[]'/></td><td><button onclick='ddl_deleteTable(\"" + table + "\")' type='button' class='btn'>删除表</button></td><td><button onclick='ddl_addColumn(\"" + table + "\")' type='button' class='btn'>增加列</button></td><td><button onclick='ddl_watchIndex(\"" + table + "\")' type='button' class='btn'>查看索引</button></td><td><button onclick='ddl_addIndex(\"" + table + "\")' type='button' class='btn'>增加索引</button></td><td><ul class='unstyled'></ul></td></tr>");
+          _table.html("<input class='index_isChosen' type=checkbox value='yes' name='iskey[]'/><a href='#' title='" + table + "'><i class='fa fa-table'></i> " + table + "</a><ul class='unstyled'></ul>");
           _table.data("table", table).attr("id", "navigatorTables_" + table);
           _table.find("a").on("dblclick", function () {
             codeMirror.replaceSelection($.trim($(this).text()) + ' ');
@@ -865,6 +863,7 @@ ${ commonheader(_('Query'), app_name, user) | n,unicode }
           });
           _table.find("a").on("click", function () {
             _table.find(".fa-table").removeClass("fa-table").addClass("fa-spin").addClass("fa-spinner");
+			alert('heihei');
             rdbms_getTableColumns(viewModel.server().name(), viewModel.database(), table, "", function (columns) {
 			if(_table.find("ul").text()==""){
 					  _table.find("ul").empty();
@@ -892,8 +891,7 @@ ${ commonheader(_('Query'), app_name, user) | n,unicode }
             codeMirror.setSelection(codeMirror.getCursor());
             codeMirror.focus();
           });
-		  _table.appendTo(__table);
-          __table.appendTo($("#navigatorTables"));
+          _table.appendTo($("#navigatorTables"));
         }
       });
       $("#navigatorLoader").hide();
